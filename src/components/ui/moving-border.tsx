@@ -1,5 +1,6 @@
-"use client";
-import React from "react";
+'use client';
+
+import React, { useRef } from "react";
 import {
   motion,
   useAnimationFrame,
@@ -7,7 +8,6 @@ import {
   useMotionValue,
   useTransform,
 } from "framer-motion";
-import { useRef } from "react";
 import { cn } from "@/lib/utils";
 
 export function Button({
@@ -32,17 +32,17 @@ export function Button({
   return (
     <Component
       className={cn(
-        "bg-transparent relative text-xl  h-16 w-40 p-[1px] overflow-hidden ",
-        containerClassName
+        "bg-transparent relative text-xl h-16 w-40 p-[1px] overflow-hidden",
+        containerClassName,
+        `rounded-[${borderRadius}]`
       )}
-      style={{
-        borderRadius: borderRadius,
-      }}
       {...otherProps}
     >
       <div
-        className="absolute inset-0"
-        style={{ borderRadius: `calc(${borderRadius} * 0.96)` }}
+        className={cn(
+          "absolute inset-0",
+          `rounded-[calc(${borderRadius}_*_0.96)]`
+        )}
       >
         <MovingBorder duration={duration} rx="30%" ry="30%">
           <div
@@ -57,11 +57,13 @@ export function Button({
       <div
         className={cn(
           "relative bg-slate-900/[0.8] border border-slate-800 backdrop-blur-xl text-white flex items-center justify-center w-full h-full text-sm antialiased",
-          className
+
+          className,
+          `rounded-[calc(${borderRadius}_*_0.96)]`
         )}
-        style={{
-          borderRadius: `calc(${borderRadius} * 0.96)`,
-        }}
+
+
+
       >
         {children}
       </div>

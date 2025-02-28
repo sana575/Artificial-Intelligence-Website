@@ -1,6 +1,5 @@
+'use client';
 
-import { image } from "framer-motion/client";
-import { getImageProps } from "next/image";
 import React from "react";
 
 const products = [
@@ -9,19 +8,15 @@ const products = [
     title: "web development",
     category: "fixing",
     price: "800.00",
-     imageUrl:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQW5CrZGpF2c_f32_-BiyU9j2XH7IglEIaSBw&s",
-     bgColor: "bg-amber-400",
-  
-   
-
+    imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQW5CrZGpF2c_f32_-BiyU9j2XH7IglEIaSBw&s",
+    bgColor: "bg-amber-400",
   },
   {
     id: 2,
     title: "learning fundamentals",
     category: "fixing",
     price: "900.00",
-    imageUrl:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQW5CrZGpF2c_f32_-BiyU9j2XH7IglEIaSBw&s",
+    imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQW5CrZGpF2c_f32_-BiyU9j2XH7IglEIaSBw&s",
     bgColor: "bg-teal-500",
   },
   {
@@ -29,8 +24,7 @@ const products = [
     title: "Digital marketing",
     category: "fixing",
     price: "1000.00",
-    imageUrl:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQW5CrZGpF2c_f32_-BiyU9j2XH7IglEIaSBw&s",
+    imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQW5CrZGpF2c_f32_-BiyU9j2XH7IglEIaSBw&s",
     bgColor: "bg-amber-400",
   },
 ];
@@ -84,16 +78,12 @@ export default function ProductList() {
             />
           </div>
 
-          <div className=" right-4 relative text-black pb-6 mt-4 text-center">
+          <div className="right-4 relative text-black pb-6 mt-4 text-center">
             <span className="block opacity-75 mb-20">{product.category}</span>
-
             <div className="flex justify-between items-center">
               <span className="block font-semibold text-xl">
                 {product.title}
               </span>
-              {/* <span className="block bg-white rounded-full text-gray-950 text-center text-xs font-bold px-3 py-2 leading-none items-center">
-                {product.price}
-              </span> */}
             </div>
           </div>
         </div>
